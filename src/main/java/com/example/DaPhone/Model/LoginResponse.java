@@ -15,8 +15,9 @@ public class LoginResponse {
 	private Long userId;
 	
 	// Constructor với 2 tham số
-	// a giải thích qua thì cái @AllArgsConstructor nó tự động thay cho việc e khai báo mục get set kia rồi.
-	// nên là e dùng cái @AllArgsConstructor mà còn khai báo get set thì nó sẽ bị lỗi báo là đã có constructor rồi.
+	// a giải thích qua thì cái @AllArgsConstructor @Setter
+	//@Getter nó tự động thay cho việc e khai báo mục get set kia rồi.
+	// nên là e dùng cái @AllArgsConstructor mà còn khai báo lại thì nó sẽ bị lỗi báo là đã có constructor rồi.
 	public LoginResponse(String auth, String username) {
 		super();
 		this.auth = auth;
