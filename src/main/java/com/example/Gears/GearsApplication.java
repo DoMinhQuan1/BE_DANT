@@ -1,4 +1,4 @@
-package com.example.DaPhone;
+package com.example.Gears;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
