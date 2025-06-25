@@ -1,4 +1,4 @@
-package com.example.DaPhone.Request;
+package com.example.Gears.Request;
 
 import lombok.Getter;
 import lombok.Setter;

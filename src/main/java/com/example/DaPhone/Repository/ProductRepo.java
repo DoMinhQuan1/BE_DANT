@@ -1,4 +1,4 @@
-package com.example.DaPhone.Repository;
+package com.example.Gears.Repository;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.DaPhone.Entity.Brand;
-import com.example.DaPhone.Entity.Category;
-import com.example.DaPhone.Entity.Product;
+import com.example.Gears.Entity.Brand;
+import com.example.Gears.Entity.Category;
+import com.example.Gears.Entity.Product;
 
 @Repository
 public interface ProductRepo  extends JpaRepository<Product, Long>{

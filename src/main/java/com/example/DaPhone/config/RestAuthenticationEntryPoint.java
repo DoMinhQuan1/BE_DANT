@@ -1,4 +1,4 @@
-package com.example.DaPhone.config;
+package com.example.Gears.config;
 
 
 import java.io.IOException;

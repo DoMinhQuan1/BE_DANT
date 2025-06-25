@@ -1,14 +1,14 @@
-package com.example.DaPhone.ServiceImpl;
+package com.example.Gears.ServiceImpl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Entity.Bill;
-import com.example.DaPhone.Entity.BillDetail;
-import com.example.DaPhone.Repository.BillDetailRepo;
-import com.example.DaPhone.Service.BillDetailService;
+import com.example.Gears.Entity.Bill;
+import com.example.Gears.Entity.BillDetail;
+import com.example.Gears.Repository.BillDetailRepo;
+import com.example.Gears.Service.BillDetailService;
 @Service
 public class BillDetailServiceImpl implements BillDetailService{
 	

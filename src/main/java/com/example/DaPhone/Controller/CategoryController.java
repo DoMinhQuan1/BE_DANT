@@ -1,4 +1,4 @@
-package com.example.DaPhone.Controller;
+package com.example.Gears.Controller;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.DaPhone.Entity.Category;
-import com.example.DaPhone.Model.Response;
-import com.example.DaPhone.Request.CategoryRequest;
-import com.example.DaPhone.Service.CategoryService;
+import com.example.Gears.Entity.Category;
+import com.example.Gears.Model.Response;
+import com.example.Gears.Request.CategoryRequest;
+import com.example.Gears.Service.CategoryService;
 @RestController
 @RequestMapping(path = "/api/category")
 public class CategoryController {

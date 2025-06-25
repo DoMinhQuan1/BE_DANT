@@ -1,4 +1,4 @@
-package com.example.DaPhone.Service;
+package com.example.Gears.Service;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -32,22 +32,22 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 
-import com.example.DaPhone.Common.CommonUtils;
-import com.example.DaPhone.Entity.Bill;
-import com.example.DaPhone.Entity.Brand;
-import com.example.DaPhone.Entity.Category;
-import com.example.DaPhone.Entity.Product;
-import com.example.DaPhone.Entity.User;
-import com.example.DaPhone.Repository.BillRepo;
-import com.example.DaPhone.Repository.BrandRepo;
-import com.example.DaPhone.Repository.CategoryRepo;
-import com.example.DaPhone.Repository.ProductRepo;
-import com.example.DaPhone.Repository.UserRepo;
-import com.example.DaPhone.Request.BillRequest;
-import com.example.DaPhone.Request.BrandRequest;
-import com.example.DaPhone.Request.CategoryRequest;
-import com.example.DaPhone.Request.ProductRequest;
-import com.example.DaPhone.Request.UserRequest;
+import com.example.Gears.Common.CommonUtils;
+import com.example.Gears.Entity.Bill;
+import com.example.Gears.Entity.Brand;
+import com.example.Gears.Entity.Category;
+import com.example.Gears.Entity.Product;
+import com.example.Gears.Entity.User;
+import com.example.Gears.Repository.BillRepo;
+import com.example.Gears.Repository.BrandRepo;
+import com.example.Gears.Repository.CategoryRepo;
+import com.example.Gears.Repository.ProductRepo;
+import com.example.Gears.Repository.UserRepo;
+import com.example.Gears.Request.BillRequest;
+import com.example.Gears.Request.BrandRequest;
+import com.example.Gears.Request.CategoryRequest;
+import com.example.Gears.Request.ProductRequest;
+import com.example.Gears.Request.UserRequest;
 
 @Component
 public class ServiceAdmin {

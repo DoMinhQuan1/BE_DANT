@@ -1,8 +1,8 @@
-package com.example.DaPhone.Service;
+package com.example.Gears.Service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Entity.Contact;
+import com.example.Gears.Entity.Contact;
 @Service
 public interface ContactService {
 	public Contact saveContact(Contact contact);

@@ -1,4 +1,4 @@
-package com.example.DaPhone.Service;
+package com.example.Gears.Service;
 
 import java.util.List;
 
@@ -6,9 +6,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Entity.Brand;
-import com.example.DaPhone.Entity.Product;
-import com.example.DaPhone.Request.BrandRequest;
+import com.example.Gears.Entity.Brand;
+import com.example.Gears.Entity.Product;
+import com.example.Gears.Request.BrandRequest;
 
 @Service
 public interface BrandService {

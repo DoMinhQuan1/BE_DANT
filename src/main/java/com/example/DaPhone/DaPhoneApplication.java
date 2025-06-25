@@ -1,4 +1,4 @@
-package com.example.DaPhone;
+package com.example.Gears;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 
 @SpringBootApplication
 @EnableScheduling
-public class DaPhoneApplication {
+public class GearsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DaPhoneApplication.class, args);
+		SpringApplication.run(GearsApplication.class, args);
 	}
 
 }

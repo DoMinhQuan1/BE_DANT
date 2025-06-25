@@ -1,4 +1,4 @@
-package com.example.DaPhone.ServiceImpl;
+package com.example.Gears.ServiceImpl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -11,10 +11,10 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Common.CommonUtils;
-import com.example.DaPhone.Entity.Admin;
-import com.example.DaPhone.Model.LoginRequest;
-import com.example.DaPhone.Service.UserAdminService;
+import com.example.Gears.Common.CommonUtils;
+import com.example.Gears.Entity.Admin;
+import com.example.Gears.Model.LoginRequest;
+import com.example.Gears.Service.UserAdminService;
 @Service
 public class UserAdminServiceImpl implements UserAdminService{
 	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;

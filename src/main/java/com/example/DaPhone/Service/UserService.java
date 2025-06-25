@@ -1,12 +1,12 @@
-package com.example.DaPhone.Service;
+package com.example.Gears.Service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Entity.User;
-import com.example.DaPhone.Model.LoginRequest;
-import com.example.DaPhone.Request.UserRequest;
+import com.example.Gears.Entity.User;
+import com.example.Gears.Model.LoginRequest;
+import com.example.Gears.Request.UserRequest;
 
 @Service
 public interface UserService {

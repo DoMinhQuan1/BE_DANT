@@ -1,8 +1,8 @@
-package com.example.DaPhone.Service;
+package com.example.Gears.Service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Model.LoginRequest;
+import com.example.Gears.Model.LoginRequest;
 
 @Service
 public interface UserAdminService {

@@ -1,4 +1,4 @@
-package com.example.DaPhone.Entity;
+package com.example.Gears.Entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

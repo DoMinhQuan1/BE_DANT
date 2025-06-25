@@ -1,4 +1,4 @@
-package com.example.DaPhone.ServiceImpl;
+package com.example.Gears.ServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Entity.Brand;
-import com.example.DaPhone.Repository.BrandRepo;
-import com.example.DaPhone.Request.BrandRequest;
-import com.example.DaPhone.Service.BrandService;
+import com.example.Gears.Entity.Brand;
+import com.example.Gears.Repository.BrandRepo;
+import com.example.Gears.Request.BrandRequest;
+import com.example.Gears.Service.BrandService;
 @Service
 public class BrandServiceImpl implements BrandService{
 	

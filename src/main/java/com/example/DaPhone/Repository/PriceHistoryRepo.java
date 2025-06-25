@@ -1,6 +1,6 @@
-package com.example.DaPhone.Repository;
+package com.example.Gears.Repository;
 
-import com.example.DaPhone.Entity.PriceHistory;
+import com.example.Gears.Entity.PriceHistory;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

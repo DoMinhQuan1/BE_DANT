@@ -1,4 +1,4 @@
-package com.example.DaPhone.ServiceImpl;
+package com.example.Gears.ServiceImpl;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -32,20 +32,20 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Common.CommonUtils;
-import com.example.DaPhone.Entity.Bill;
-import com.example.DaPhone.Entity.BillDetail;
-import com.example.DaPhone.Entity.Config;
-import com.example.DaPhone.Entity.EmailJob;
-import com.example.DaPhone.Entity.Product;
-import com.example.DaPhone.Entity.User;
-import com.example.DaPhone.Repository.BillDetailRepo;
-import com.example.DaPhone.Repository.BillRepo;
-import com.example.DaPhone.Repository.ConfigRepo;
-import com.example.DaPhone.Repository.EmailJobRepo;
-import com.example.DaPhone.Repository.ProductRepo;
-import com.example.DaPhone.Request.BillRequest;
-import com.example.DaPhone.Service.BillService;
+import com.example.Gears.Common.CommonUtils;
+import com.example.Gears.Entity.Bill;
+import com.example.Gears.Entity.BillDetail;
+import com.example.Gears.Entity.Config;
+import com.example.Gears.Entity.EmailJob;
+import com.example.Gears.Entity.Product;
+import com.example.Gears.Entity.User;
+import com.example.Gears.Repository.BillDetailRepo;
+import com.example.Gears.Repository.BillRepo;
+import com.example.Gears.Repository.ConfigRepo;
+import com.example.Gears.Repository.EmailJobRepo;
+import com.example.Gears.Repository.ProductRepo;
+import com.example.Gears.Request.BillRequest;
+import com.example.Gears.Service.BillService;
 import com.google.gson.Gson;
 
 @Service

@@ -1,4 +1,4 @@
-package com.example.DaPhone.Controller;
+package com.example.Gears.Controller;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -31,14 +31,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.example.DaPhone.Common.CommonUtils;
-import com.example.DaPhone.Entity.Product;
-import com.example.DaPhone.Model.Response;
-import com.example.DaPhone.Request.ProductRequest;
-import com.example.DaPhone.Service.ProductService;
-import com.example.DaPhone.Service.PriceHistoryService;
-import com.example.DaPhone.ServiceImpl.ProductServiceImpl;
-import com.example.DaPhone.Entity.PriceHistory;
+import com.example.Gears.Common.CommonUtils;
+import com.example.Gears.Entity.Product;
+import com.example.Gears.Model.Response;
+import com.example.Gears.Request.ProductRequest;
+import com.example.Gears.Service.ProductService;
+import com.example.Gears.Service.PriceHistoryService;
+import com.example.Gears.ServiceImpl.ProductServiceImpl;
+import com.example.Gears.Entity.PriceHistory;
 
 
 @RestController

@@ -1,4 +1,4 @@
-package com.example.DaPhone.ServiceImpl;
+package com.example.Gears.ServiceImpl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,12 +19,12 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Service;
 
-import com.example.DaPhone.Common.CommonUtils;
-import com.example.DaPhone.Entity.User;
-import com.example.DaPhone.Model.LoginRequest;
-import com.example.DaPhone.Repository.UserRepo;
-import com.example.DaPhone.Request.UserRequest;
-import com.example.DaPhone.Service.UserService;
+import com.example.Gears.Common.CommonUtils;
+import com.example.Gears.Entity.User;
+import com.example.Gears.Model.LoginRequest;
+import com.example.Gears.Repository.UserRepo;
+import com.example.Gears.Request.UserRequest;
+import com.example.Gears.Service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService{

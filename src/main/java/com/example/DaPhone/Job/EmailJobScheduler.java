@@ -1,4 +1,4 @@
-package com.example.DaPhone.Job;
+package com.example.Gears.Job;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -11,10 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import com.example.DaPhone.Common.CommonUtils;
-import com.example.DaPhone.Entity.EmailJob;
-import com.example.DaPhone.Repository.ConfigRepo;
-import com.example.DaPhone.Repository.EmailJobRepo;
+import com.example.Gears.Common.CommonUtils;
+import com.example.Gears.Entity.EmailJob;
+import com.example.Gears.Repository.ConfigRepo;
+import com.example.Gears.Repository.EmailJobRepo;
 
 @Component
 public class EmailJobScheduler {

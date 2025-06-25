@@ -1,4 +1,4 @@
-package com.example.DaPhone.Service;
+package com.example.Gears.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +16,16 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Component;
 
-import com.example.DaPhone.Entity.Bill;
-import com.example.DaPhone.Entity.Brand;
-import com.example.DaPhone.Entity.Category;
-import com.example.DaPhone.Entity.Product;
-import com.example.DaPhone.Entity.User;
-import com.example.DaPhone.Repository.BillRepo;
-import com.example.DaPhone.Repository.ProductRepo;
-import com.example.DaPhone.Repository.UserRepo;
-import com.example.DaPhone.Request.BillRequest;
-import com.example.DaPhone.Request.ProductRequest;
+import com.example.Gears.Entity.Bill;
+import com.example.Gears.Entity.Brand;
+import com.example.Gears.Entity.Category;
+import com.example.Gears.Entity.Product;
+import com.example.Gears.Entity.User;
+import com.example.Gears.Repository.BillRepo;
+import com.example.Gears.Repository.ProductRepo;
+import com.example.Gears.Repository.UserRepo;
+import com.example.Gears.Request.BillRequest;
+import com.example.Gears.Request.ProductRequest;
 
 @Component
 public class ServiceUser {

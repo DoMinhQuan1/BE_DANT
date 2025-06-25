@@ -1,4 +1,4 @@
-package com.example.DaPhone.Model;
+package com.example.Gears.Model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
