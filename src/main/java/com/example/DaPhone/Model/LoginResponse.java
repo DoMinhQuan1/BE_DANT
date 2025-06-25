@@ -1,26 +1,49 @@
 package com.example.Gears.Model;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Setter
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
 public class LoginResponse {
-	private String auth;
-	private String username;
-	private Long userId;
-	
-	// Constructor với 2 tham số
-	// a giải thích qua thì cái @AllArgsConstructor @Setter
-	//@Getter nó tự động thay cho việc e khai báo mục get set kia rồi.
-	// nên là e dùng cái @AllArgsConstructor mà còn khai báo lại thì nó sẽ bị lỗi báo là đã có constructor rồi.
-	public LoginResponse(String auth, String username) {
-		super();
-		this.auth = auth;
-		this.username = username;
-	}
+    private String auth;
+    private String username;
+    private Long userId;
+
+    // Constructor không tham số
+    public LoginResponse() {
+    }
+
+    // Constructor 2 tham số
+    public LoginResponse(String auth, String username) {
+        this.auth = auth;
+        this.username = username;
+    }
+
+    // Constructor đầy đủ 3 tham số
+    public LoginResponse(String auth, String username, Long userId) {
+        this.auth = auth;
+        this.username = username;
+        this.userId = userId;
+    }
+
+    // Getter và Setter
+    public String getAuth() {
+        return auth;
+    }
+
+    public void setAuth(String auth) {
+        this.auth = auth;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 }
