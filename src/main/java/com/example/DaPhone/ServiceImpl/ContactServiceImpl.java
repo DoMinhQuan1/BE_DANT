@@ -1,13 +1,13 @@
-package com.example.Gears.ServiceImpl;
+package com.example.DaPhone.ServiceImpl;
 
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.Gears.Entity.Contact;
-import com.example.Gears.Repository.ContactRepo;
-import com.example.Gears.Service.ContactService;
+import com.example.DaPhone.Entity.Contact;
+import com.example.DaPhone.Repository.ContactRepo;
+import com.example.DaPhone.Service.ContactService;
 @Service
 public class ContactServiceImpl implements ContactService{
 	

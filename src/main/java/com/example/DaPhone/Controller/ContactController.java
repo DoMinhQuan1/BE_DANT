@@ -1,4 +1,4 @@
-package com.example.Gears.Controller;
+package com.example.DaPhone.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Gears.Entity.Contact;
-import com.example.Gears.Model.Response;
-import com.example.Gears.Service.ContactService;
+import com.example.DaPhone.Entity.Contact;
+import com.example.DaPhone.Model.Response;
+import com.example.DaPhone.Service.ContactService;
 
 @RestController
 @RequestMapping(path = "/api/contact")

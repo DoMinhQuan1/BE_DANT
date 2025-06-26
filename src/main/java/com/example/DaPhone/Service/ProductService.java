@@ -1,10 +1,10 @@
-//package com.example.Gears.Service;
+//package com.example.DaPhone.Service;
 //
-//import com.example.Gears.Entity.PriceHistory;
-//import com.example.Gears.Entity.Product;
-//import com.example.Gears.Repository.PriceHistoryRepo;
-//import com.example.Gears.Repository.ProductRepo;
-//import com.example.Gears.Request.ProductRequest;
+//import com.example.DaPhone.Entity.PriceHistory;
+//import com.example.DaPhone.Entity.Product;
+//import com.example.DaPhone.Repository.PriceHistoryRepo;
+//import com.example.DaPhone.Repository.ProductRepo;
+//import com.example.DaPhone.Request.ProductRequest;
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.data.domain.Page;
 //import org.springframework.data.domain.Pageable;
@@ -65,7 +65,7 @@
 //        return product != null ? priceHistoryRepo.findByProduct(product) : Collections.emptyList();
 //    }
 //}
-package com.example.Gears.Service;
+package com.example.DaPhone.Service;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -75,8 +75,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.Gears.Entity.Product;
-import com.example.Gears.Request.ProductRequest;
+import com.example.DaPhone.Entity.Product;
+import com.example.DaPhone.Request.ProductRequest;
 @Service
 public interface ProductService {
 	public Page<Product> findProduct(ProductRequest productParam, Pageable pageable);

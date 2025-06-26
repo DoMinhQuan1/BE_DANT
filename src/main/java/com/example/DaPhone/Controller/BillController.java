@@ -1,4 +1,4 @@
-package com.example.Gears.Controller;
+package com.example.DaPhone.Controller;
 
 import java.io.ByteArrayInputStream;
 import java.text.NumberFormat;
@@ -23,12 +23,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Gears.Common.CommonUtils;
-import com.example.Gears.Entity.Bill;
-import com.example.Gears.Entity.BillDetail;
-import com.example.Gears.Model.Response;
-import com.example.Gears.Request.BillRequest;
-import com.example.Gears.Service.BillService;
+import com.example.DaPhone.Common.CommonUtils;
+import com.example.DaPhone.Entity.Bill;
+import com.example.DaPhone.Entity.BillDetail;
+import com.example.DaPhone.Model.Response;
+import com.example.DaPhone.Request.BillRequest;
+import com.example.DaPhone.Service.BillService;
 
 @RestController
 @RequestMapping(path = "/api/bill")

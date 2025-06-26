@@ -1,4 +1,4 @@
-package com.example.Gears.Service;
+package com.example.DaPhone.Service;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -8,8 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.example.Gears.Entity.Bill;
-import com.example.Gears.Request.BillRequest;
+import com.example.DaPhone.Entity.Bill;
+import com.example.DaPhone.Request.BillRequest;
 
 @Service
 public interface BillService {

@@ -1,4 +1,4 @@
-package com.example.Gears.Controller;
+package com.example.DaPhone.Controller;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Gears.Entity.User;
-import com.example.Gears.Model.Response;
-import com.example.Gears.Request.UserRequest;
-import com.example.Gears.Service.UserService;
+import com.example.DaPhone.Entity.User;
+import com.example.DaPhone.Model.Response;
+import com.example.DaPhone.Request.UserRequest;
+import com.example.DaPhone.Service.UserService;
 @RestController
 @RequestMapping(path = "/api/user")
 public class UserController {

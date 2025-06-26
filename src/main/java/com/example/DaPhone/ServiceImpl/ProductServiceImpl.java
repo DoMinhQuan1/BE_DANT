@@ -1,4 +1,4 @@
-package com.example.Gears.ServiceImpl;
+package com.example.DaPhone.ServiceImpl;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -32,16 +32,16 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.example.Gears.Entity.Brand;
-import com.example.Gears.Entity.Category;
-import com.example.Gears.Entity.Product;
-import com.example.Gears.Entity.PriceHistory;
-import com.example.Gears.Repository.BrandRepo;
-import com.example.Gears.Repository.CategoryRepo;
-import com.example.Gears.Repository.ProductRepo;
-import com.example.Gears.Request.ProductRequest;
-import com.example.Gears.Service.ProductService;
-import com.example.Gears.Service.PriceHistoryService;
+import com.example.DaPhone.Entity.Brand;
+import com.example.DaPhone.Entity.Category;
+import com.example.DaPhone.Entity.Product;
+import com.example.DaPhone.Entity.PriceHistory;
+import com.example.DaPhone.Repository.BrandRepo;
+import com.example.DaPhone.Repository.CategoryRepo;
+import com.example.DaPhone.Repository.ProductRepo;
+import com.example.DaPhone.Request.ProductRequest;
+import com.example.DaPhone.Service.ProductService;
+import com.example.DaPhone.Service.PriceHistoryService;
 
 @Service
 public class ProductServiceImpl implements ProductService{

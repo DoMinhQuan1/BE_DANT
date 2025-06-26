@@ -1,4 +1,4 @@
-package com.example.Gears.config;
+package com.example.DaPhone.config;
 
 
 import java.io.IOException;
@@ -26,8 +26,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.example.Gears.Common.CommonUtils;
-import com.example.Gears.Common.CommonUtils.UserDetailPrincipal;
+import com.example.DaPhone.Common.CommonUtils;
+import com.example.DaPhone.Common.CommonUtils.UserDetailPrincipal;
 
 import io.jsonwebtoken.security.SignatureException;
 

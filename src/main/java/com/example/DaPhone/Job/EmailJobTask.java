@@ -1,4 +1,4 @@
-package com.example.Gears.Job;
+package com.example.DaPhone.Job;
 
 import java.util.Properties;
 import java.util.concurrent.Callable;
@@ -9,7 +9,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.example.Gears.Entity.EmailJob;
+import com.example.DaPhone.Entity.EmailJob;
 
 import lombok.Getter;
 import lombok.Setter;

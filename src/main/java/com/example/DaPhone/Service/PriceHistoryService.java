@@ -1,6 +1,6 @@
-package com.example.Gears.Service;
+package com.example.DaPhone.Service;
 
-import com.example.Gears.Entity.PriceHistory;
+import com.example.DaPhone.Entity.PriceHistory;
 
 import java.util.List;
 

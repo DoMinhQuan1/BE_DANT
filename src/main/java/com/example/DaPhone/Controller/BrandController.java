@@ -1,4 +1,4 @@
-package com.example.Gears.Controller;
+package com.example.DaPhone.Controller;
 
 import java.util.List;
 
@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Gears.Entity.Brand;
-import com.example.Gears.Model.Response;
-import com.example.Gears.Request.BrandRequest;
-import com.example.Gears.Service.BrandService;
+import com.example.DaPhone.Entity.Brand;
+import com.example.DaPhone.Model.Response;
+import com.example.DaPhone.Request.BrandRequest;
+import com.example.DaPhone.Service.BrandService;
 
 @RestController
 @RequestMapping(path = "/api/brand")
@@ -30,8 +30,8 @@ public class BrandController {
 	
 	@GetMapping(value = "")
 	public ResponseEntity<Response<Brand>> getBrands(BrandRequest brandParam) {
-		int page = brandParam.getPageIndex() - 1;
-		int size = brandParam.getPageSize();
+		int page = Math.max(0, brandParam.getPageIndex() - 1);
+		int size = Math.max(1, brandParam.getPageSize());
 		Sort sortable = null;
 		if (brandParam.getSortField() != null && !brandParam.getSortField().equalsIgnoreCase("null")) {
 			if (brandParam.getSortOrder().equals("ascend")) {

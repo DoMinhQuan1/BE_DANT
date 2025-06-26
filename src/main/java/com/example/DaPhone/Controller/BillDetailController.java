@@ -1,4 +1,4 @@
-package com.example.Gears.Controller;
+package com.example.DaPhone.Controller;
 
 import java.util.List;
 
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Gears.Entity.BillDetail;
-import com.example.Gears.Model.Response;
-import com.example.Gears.Service.BillDetailService;
+import com.example.DaPhone.Entity.BillDetail;
+import com.example.DaPhone.Model.Response;
+import com.example.DaPhone.Service.BillDetailService;
 @RestController
 @RequestMapping(path = "/api/bill-detail")
 public class BillDetailController {

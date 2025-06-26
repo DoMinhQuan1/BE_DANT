@@ -1,4 +1,4 @@
-package com.example.Gears.Model;
+package com.example.DaPhone.Model;
 
 import java.util.List;
 

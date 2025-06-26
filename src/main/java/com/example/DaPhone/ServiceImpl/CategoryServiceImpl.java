@@ -1,4 +1,4 @@
-package com.example.Gears.ServiceImpl;
+package com.example.DaPhone.ServiceImpl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,10 +14,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 
-import com.example.Gears.Entity.Category;
-import com.example.Gears.Repository.CategoryRepo;
-import com.example.Gears.Request.CategoryRequest;
-import com.example.Gears.Service.CategoryService;
+import com.example.DaPhone.Entity.Category;
+import com.example.DaPhone.Repository.CategoryRepo;
+import com.example.DaPhone.Request.CategoryRequest;
+import com.example.DaPhone.Service.CategoryService;
 @Service
 public class CategoryServiceImpl implements CategoryService{
 	

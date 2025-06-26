@@ -1,4 +1,4 @@
-package com.example.Gears.Auth;
+package com.example.DaPhone.Auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.Gears.Common.CommonUtils;
-import com.example.Gears.Model.LoginRequest;
-import com.example.Gears.Model.LoginResponse;
-import com.example.Gears.Service.UserAdminService;
-import com.example.Gears.Service.UserService;
+import com.example.DaPhone.Common.CommonUtils;
+import com.example.DaPhone.Model.LoginRequest;
+import com.example.DaPhone.Model.LoginResponse;
+import com.example.DaPhone.Service.UserAdminService;
+import com.example.DaPhone.Service.UserService;
 
 @RestController
 @RequestMapping(path = "/api/authenticate")
