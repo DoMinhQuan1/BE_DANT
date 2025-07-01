@@ -46,14 +46,14 @@ public class Product {
 	private long productImportPrice;
 	@Column(name = "product_quantily")
 	private int productQuantily;
-	@Column(name = "product_ram")
-	private String productRAM;
+	// @Column(name = "product_ram")
+	// private String productRAM;
 	@Column(name = "product_dimensions")
 	private String productDimensions;
-	@Column(name = "product_weight")
-	private byte productWeight;
-	@Column(name = "product_material")
-	private String productMaterial;
+	@Column(name = "product_connection")
+	private String productConnection;
+	// @Column(name = "product_material")
+	// private String productMaterial;
 	@Column(name = "product_quantity_sold")
 	private int productQuantitySold;
 	@Column(name = "product_marketprice")
@@ -114,30 +114,38 @@ public class Product {
 	public void setProductQuantily(int productQuantily) {
 		this.productQuantily = productQuantily;
 	}
-	public String getProductRAM() {
-		return productRAM;
-	}
-	public void setProductRAM(String productRAM) {
-		this.productRAM = productRAM;
-	}
+	// public String getProductRAM() {
+	// 	return productRAM;
+	// }
+	// public void setProductRAM(String productRAM) {
+	// 	this.productRAM = productRAM;
+	// }
 	public String getProductDimensions() {
 		return productDimensions;
 	}
 	public void setProductDimensions(String productDimensions) {
 		this.productDimensions = productDimensions;
 	}
-	public byte getProductWeight() {
-		return productWeight;
+	// public byte getProductWeight() {
+	// 	return productWeight;
+	// }
+	// public void setProductWeight(byte productWeight) {
+	// 	this.productWeight = productWeight;
+	// }
+	public String getProductConnection() {
+		return productConnection;
 	}
-	public void setProductWeight(byte productWeight) {
-		this.productWeight = productWeight;
+	public void setProductConnection(String productConnection) {
+		this.productConnection = productConnection;
 	}
-	public String getProductMaterial() {
-		return productMaterial;
-	}
-	public void setProductMaterial(String productMaterial) {
-		this.productMaterial = productMaterial;
-	}
+
+
+	// public String getProductMaterial() {
+	// 	return productMaterial;
+	// }
+	// public void setProductMaterial(String productMaterial) {
+	// 	this.productMaterial = productMaterial;
+	// }
 	public int getProductQuantitySold() {
 		return productQuantitySold;
 	}
