@@ -142,10 +142,23 @@ public class ProductController {
 
 	@PostMapping(value = "/save")
 	public ResponseEntity<Response<Product>> saveProduct(@RequestBody Product product) {
+		System.out.println("Received product: " + product);
 		if (product != null) {
-			return new ResponseEntity<Response<Product>>(new Response<Product>(productService.saveProduct(product)), HttpStatus.OK);
+			try {
+				Product savedProduct = productService.saveProduct(product);
+				return new ResponseEntity<Response<Product>>(new Response<Product>(savedProduct), HttpStatus.OK);
+			} catch (Exception e) {
+				System.err.println("Error saving product: " + e.getMessage());
+				e.printStackTrace();
+				return new ResponseEntity<Response<Product>>(new Response<Product>("error", e.getMessage()), HttpStatus.INTERNAL_SERVER_ERROR);
+			}
 		}
 		return new ResponseEntity<Response<Product>>(new Response<Product>("loi", "10001"), HttpStatus.OK);
+	}
+	
+	@GetMapping(value = "/test")
+	public ResponseEntity<String> test() {
+		return ResponseEntity.ok("Product API is working!");
 	}
 	
 	// update image

@@ -99,18 +99,33 @@ public class ProductServiceImpl implements ProductService{
 		return listPage;
 	}
 	public Product saveProduct(Product product) {
-	    Product existingProduct = productRepo.findById(product.getProductID()).orElse(null);
-	    if (existingProduct != null && existingProduct.getProductPrice() != product.getProductPrice()) {
-	        PriceHistory priceHistory = new PriceHistory();
-	        priceHistory.setProductId(existingProduct.getProductID());
-	        priceHistory.setProductName(existingProduct.getProductName());
-	        priceHistory.setOldPrice(existingProduct.getProductPrice());
-	        priceHistory.setNewPrice(product.getProductPrice());
-	        priceHistory.setChangedBy(1L); // ID người sửa (tạm đặt là 1, có thể lấy từ session)
-	        priceHistory.setChangeDate(new Timestamp(System.currentTimeMillis()));
-	        priceHistoryService.savePriceHistory(priceHistory);
-	    }
-	    return productRepo.save(product);
+		// Lấy brand và category từ DB theo id (nếu có)
+		if (product.getBrand() != null && product.getBrand().getBrandID() > 0) {
+			Brand brand = brandRepo.findById(product.getBrand().getBrandID()).orElse(null);
+			product.setBrand(brand);
+		}
+		if (product.getCategory() != null && product.getCategory().getCategoryID() > 0) {
+			Category category = categoryRepo.findById(product.getCategory().getCategoryID()).orElse(null);
+			product.setCategory(category);
+		}
+		// Xử lý history như cũ...
+		Product existingProduct = productRepo.findById(product.getProductID()).orElse(null);
+		if (existingProduct != null && existingProduct.getProductPrice() != product.getProductPrice()) {
+			PriceHistory priceHistory = new PriceHistory();
+			priceHistory.setProductId(existingProduct.getProductID());
+			priceHistory.setProductName(existingProduct.getProductName());
+			priceHistory.setOldPrice(existingProduct.getProductPrice());
+			priceHistory.setNewPrice(product.getProductPrice());
+			priceHistory.setChangedBy(1L); // ID người sửa (tạm đặt là 1, có thể lấy từ session)
+			priceHistory.setChangeDate(new java.sql.Timestamp(System.currentTimeMillis()));
+			priceHistoryService.savePriceHistory(priceHistory);
+		}
+		try {
+			return productRepo.save(product);
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw e;
+		}
 	}
 	@Override
 	public void deleteProduct(Long id) {

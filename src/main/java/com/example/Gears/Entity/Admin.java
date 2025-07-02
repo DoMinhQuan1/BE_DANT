@@ -19,10 +19,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Admin {
-	public Long getUser_id() {
+	public Integer getUser_id() {
 		return user_id;
 	}
-	public void setUser_id(Long user_id) {
+	public void setUser_id(Integer user_id) {
 		this.user_id = user_id;
 	}
 	public String getUser_name() {
@@ -52,7 +52,7 @@ public class Admin {
 	@Id
 	@Column(name = "user_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long user_id;
+	private Integer user_id;
 	@Column(name = "user_name")
 	private String user_name;
 	@Column(name = "user_pass")
