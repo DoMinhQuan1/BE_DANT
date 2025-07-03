@@ -13,13 +13,30 @@ public class Response<T>{
     private String errorMessage;
     private T result;
     private Long rowCount;
-    private List<T> results;
+    private List<?> results;
 
-    public Response(Long rowCount, List<T> results) {
+    // Constructor mặc định
+    public Response() {
+        super();
+    }
+
+    public Response(Long rowCount, List<?> results) {
         super();
         this.rowCount = rowCount;
         this.results = results;
     }
+    
+    public Response(T result) {
+        super();
+        this.result = result;
+    }
+    
+    public Response(String errorCode, String errorMessage) {
+        super();
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+    }
+    
     public String getErrorCode() {
 		return errorCode;
 	}
@@ -44,19 +61,10 @@ public class Response<T>{
 	public void setRowCount(Long rowCount) {
 		this.rowCount = rowCount;
 	}
-	public List<T> getResults() {
+	public List<?> getResults() {
 		return results;
 	}
-	public void setResults(List<T> results) {
+	public void setResults(List<?> results) {
 		this.results = results;
-	}
-	public Response(T result) {
-        super();
-        this.result = result;
-    }
-	public Response(String errorCode, String errorMessage) {
-		super();
-		this.errorCode = errorCode;
-		this.errorMessage = errorMessage;
 	}
 }

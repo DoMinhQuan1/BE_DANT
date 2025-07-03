@@ -19,6 +19,7 @@ import org.springframework.stereotype.Service;
 import com.example.Gears.Entity.Product;
 import com.example.Gears.Entity.Bill;
 import com.example.Gears.Entity.User;
+import com.example.Gears.Entity.Voucher;
 
 @Service
 public class ExcelExportService {
@@ -164,6 +165,63 @@ public class ExcelExportService {
                 row.createCell(2).setCellValue(user.getUserEmail());
                 row.createCell(3).setCellValue(user.getUserPhone());
                 row.createCell(4).setCellValue(user.isUserRole() ? "Admin" : "User");
+            }
+            
+            // Tự động điều chỉnh độ rộng cột
+            for (int i = 0; i < columns.length; i++) {
+                sheet.autoSizeColumn(i);
+            }
+            
+            workbook.write(out);
+            return new ByteArrayInputStream(out.toByteArray());
+        }
+    }
+    
+    public ByteArrayInputStream exportVouchersToExcel(List<Voucher> vouchers) throws IOException {
+        try (Workbook workbook = new XSSFWorkbook(); ByteArrayOutputStream out = new ByteArrayOutputStream();) {
+            
+            Sheet sheet = workbook.createSheet("Vouchers");
+            
+            // Tạo style cho header
+            CellStyle headerStyle = workbook.createCellStyle();
+            Font headerFont = workbook.createFont();
+            headerFont.setBold(true);
+            headerFont.setColor(IndexedColors.WHITE.getIndex());
+            headerStyle.setFont(headerFont);
+            headerStyle.setFillForegroundColor(IndexedColors.VIOLET.getIndex());
+            headerStyle.setFillPattern(FillPatternType.SOLID_FOREGROUND);
+            
+            // Tạo header
+            Row headerRow = sheet.createRow(0);
+            String[] columns = {"ID", "Mã voucher", "Tên voucher", "Mô tả", "Loại giảm giá", "Giá trị giảm", 
+                               "Giá trị đơn hàng tối thiểu", "Giảm tối đa", "Giới hạn sử dụng", "Đã sử dụng", 
+                               "Ngày bắt đầu", "Ngày kết thúc", "Trạng thái", "Ngày tạo"};
+            
+            for (int i = 0; i < columns.length; i++) {
+                Cell cell = headerRow.createCell(i);
+                cell.setCellValue(columns[i]);
+                cell.setCellStyle(headerStyle);
+            }
+            
+            // Thêm dữ liệu
+            int rowIdx = 1;
+            for (Voucher voucher : vouchers) {
+                Row row = sheet.createRow(rowIdx++);
+                
+                row.createCell(0).setCellValue(voucher.getVoucherId() != null ? voucher.getVoucherId() : 0);
+                row.createCell(1).setCellValue(voucher.getVoucherCode() != null ? voucher.getVoucherCode() : "");
+                row.createCell(2).setCellValue(voucher.getVoucherName() != null ? voucher.getVoucherName() : "");
+                row.createCell(3).setCellValue(voucher.getDescription() != null ? voucher.getDescription() : "");
+                row.createCell(4).setCellValue(voucher.getDiscountType() != null ? voucher.getDiscountType().toString() : "");
+                row.createCell(5).setCellValue(voucher.getDiscountValue() != null ? voucher.getDiscountValue().doubleValue() : 0.0);
+                row.createCell(6).setCellValue(voucher.getMinOrderAmount() != null ? voucher.getMinOrderAmount().doubleValue() : 0.0);
+                row.createCell(7).setCellValue(voucher.getMaxDiscountAmount() != null ? voucher.getMaxDiscountAmount().doubleValue() : 0.0);
+                row.createCell(8).setCellValue(voucher.getUsageLimit() != null ? voucher.getUsageLimit() : 0);
+                row.createCell(9).setCellValue(voucher.getUsedCount() != null ? voucher.getUsedCount() : 0);
+                row.createCell(10).setCellValue(voucher.getStartDate() != null ? voucher.getStartDate().toString() : "");
+                row.createCell(11).setCellValue(voucher.getEndDate() != null ? voucher.getEndDate().toString() : "");
+                row.createCell(12).setCellValue(voucher.getIsActive() != null && voucher.getIsActive() ? "Active" : "Inactive");
+                row.createCell(13).setCellValue(voucher.getCreatedDate() != null ? voucher.getCreatedDate().toString() : "");
             }
             
             // Tự động điều chỉnh độ rộng cột
