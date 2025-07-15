@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface PriceHistoryRepo extends JpaRepository<PriceHistory, Long> {
     List<PriceHistory> findByProductId(Long productId);
+
+    List<PriceHistory> findByProductName(Integer productName);
 }

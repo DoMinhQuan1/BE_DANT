@@ -23,4 +23,14 @@ public class PriceHistoryServiceImpl implements PriceHistoryService {
     public List<PriceHistory> getPriceHistory(Long productId) {
         return priceHistoryRepo.findByProductId(productId);
     }
+
+    @Override
+    public List<PriceHistory> getAllPriceHistory() {
+        return priceHistoryRepo.findAll();
+    }
+
+    @Override
+    public List<PriceHistory> getPriceHistoryByProductName(Integer productName) {
+        return priceHistoryRepo.findByProductName(productName);
+    }
 }

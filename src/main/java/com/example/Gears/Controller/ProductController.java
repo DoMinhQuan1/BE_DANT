@@ -68,6 +68,7 @@ public class ProductController {
 			return ResponseEntity.ok().headers(headers).body(new InputStreamResource(in));
 		} catch (Exception e) {
 			e.printStackTrace();
+			
 		}
 		return ResponseEntity.notFound().build();
 	}
